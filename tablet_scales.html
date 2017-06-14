@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+  
+* {
+  
+}
+
+
+table{
+  border-collapse:collapse;
+  
+}
+nav{
+  background-color:#000000;
+  border: 1px solid grey;
+  width:35em;
+  border-radius:3px;
+  margin-left:20px; 
+  
+}
+
+nav a{
+  color:#ffffff;
+  font-size:1em;
+  text-decoration:none;
+  font-family:arial;
+  height:4em;
+  position:relative; 
+  
+  
+  
+  
+}
+
+td:active{
+  
+}
+
+td:hover{
+  background-color:#333333;
+  
+}
+
+td:visited{
+  
+}
+
+#containerForNav{ 
+  background-color:#000000;
+  padding:10px; 
+  
+  
+  
+}
+
+td{
+  text-align:center;
+  padding:10px;
+  padding-left:0px;
+  
+ 
+  
+  
+  
+   
+}
+
+.active
+{
+  background-color:#696969;
+}
+
+.round-top-left-bottom-corner-cell{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius:3px;
+}
+
+.round-top-right-bottom-corner-cell{
+  border-top-right-radius:3px;
+  border-bottom-right-radius:3px;
+}
+
+.parallax {
+  background-image: url('http://wallpapers-catalogue.com/mountain-reflections-norway-wallpapers.1920x1080.jpg');
+min-height:100px;
+ 
+  
+  background-attachment: fixed;
+  
+}
+
+section{
+  border:1px solid black;
+  text-align:center;
+  background-color:red;
+  margin-bottom:20px;
+  padding:50px;
+  color:white;
+}
+
+.SectionBottomMargin{
+  margin-bottom:100px;
+}
+
+
+
+.content{
+  margin-top:100px;
+}
+
+
+ 
+
+
+
+
+
+</style>
+  <title>Tablet</title>
+</head>
+<body>
+<div class="parallax"> 
+  <div id="containerForNav">
+<nav>
+  <table width="100%" border="0" cellpadding="1">
+    <tr>
+      <td class="round-top-left-bottom-corner-cell">
+        
+  <a href="index_scales.html">Home</a>
+        
+      </td>
+      <td>      
+  <a href="desktop_scales.html">Desktop</a>
+      </td>
+      <td>
+  <a href="tablet_scales.html">Tablet</a>
+      </td>
+      <td>
+  <a href="tabportrait_scales.html">Tablet (Portrait)</a>
+      </td>
+      <td class="round-top-right-bottom-corner-cell">
+  <a href="mobile_scales.html">Mobile</a>
+      </td>
+    </tr>
+  </table>
+  <script type="text/javascript">
+    function print(data){
+      console.log(data);
+    } 
+        var htmlCollectionArray = document.getElementsByTagName('td');
+        for (let i = 0; i<htmlCollectionArray.length; i++){
+          let navLink = htmlCollectionArray[i];
+          navLink.addEventListener('click', function(event){
+            event.preventDefault(true);
+            let newActiveLink = navLink.getElementsByTagName('a')[0];
+            // alert(newActiveLink.innerHTML);
+            let newNavLinkCollectionArray = navLink.getElementsByTagName('a');
+            if (newActiveLink.innerHTML === 'Tablet'){
+              var previousActiveLink = document.getElementsByClassName('active')[0];
+              if (typeof previousActiveLink != 'undefined'){
+                previousActiveLink.classList.remove('active');
+              }
+              window.location.href='C:/Users/Admin/Desktop/tablet_scales.html';
+              navLink.classList.add('active');
+                }
+            else if (newActiveLink.innerHTML === 'Home'){
+              var previousActiveLink = document.getElementsByClassName('active')[0];
+              if (typeof previousActiveLink != "undefined"){
+                previousActiveLink.classList.remove('active');
+              }
+              window.location.href='C:/Users/Admin/Desktop/index_scales.html';
+              navLink.classList.add('active');
+            }
+
+            else if (newActiveLink.innerHTML === 'Tablet (Portrait)'){
+              var previousActiveLink = document.getElementsByClassName('active')[0];
+              if (typeof previousActiveLink != 'undefined'){
+                previousActiveLink.classList.remove('active');
+              }
+              window.location.href='C:/Users/Admin/Desktop/tabportrait_scales.html';
+              navLink.classList.add('active');
+             
+            }
+
+            else if (newActiveLink.innerHTML === 'Desktop'){
+              var previousActiveLink = document.getElementsByClassName('active')[0];
+              if(typeof previousActiveLink != 'undefined'){
+                previousActiveLink.classList.remove('active');
+              }
+              window.location.href='C:/Users/Admin/Desktop/desktop_scales.html';
+              navLink.classList.add('active');
+            }
+
+            else if (newActiveLink.innerHTML === 'Mobile'){
+              var previousActiveLink = document.getElementsByClassName('active')[0];
+              if (typeof previousActiveLink != 'undefined'){
+                previousActiveLink.classList.remove('active');
+              }
+              window.location.href='C:/Users/Admin/Desktop/mobile_scales.html';
+              navLink.classList.add('active');
+            }
+          });
+          }
+
+
+  </script>
+  </nav>
+</div>
+<main class="content">
+  <section class="SectionBottomMargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi rerum voluptatem placeat error maiores voluptas ut sequi reiciendis. Cum saepe atque cumque accusamus commodi, sapiente velit quas quaerat doloribus magnam.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ratione libero similique ipsum explicabo esse assumenda impedit ipsam, delectus velit itaque soluta veritatis voluptatibus consectetur optio repudiandae pariatur tempora sed.</section>
+  <section class="SectionBottomMargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos repellat amet nobis aspernatur doloremque, impedit esse sunt harum autem consectetur, molestiae nemo sit vitae sed expedita blanditiis reprehenderit mollitia ad.</section>
+    <section class="SectionBottomMargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta sit unde sed provident consequatur optio odio totam modi, error, ea magni dignissimos distinctio facere facilis cupiditate aliquid atque, quidem maiores!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quibusdam mollitia adipisci vel blanditiis, provident voluptatibus non assumenda, veritatis minima similique. Cupiditate voluptatem, saepe nostrum repellat voluptates placeat facere a.</section>
+    <section class="SectionBottomMargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos fugiat itaque ad molestias obcaecati, aliquam ipsum magni. Odio, porro eos unde perspiciatis tempore in nihil facere, necessitatibus minus minima fugit!
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci repudiandae facere ducimus! Ab quaerat, dignissimos vero molestias officia repudiandae nesciunt impedit quo neque facilis explicabo nisi voluptate blanditiis alias.</section>
+</main>
+</div>
+</body>
+</html>

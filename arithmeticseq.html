@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<script>
+			function isASequence (myArray) {
+			  var diff=myArray[0] - myArray[1];
+			  diff=Math.abs(diff);
+			  for (i=1; i<myArray.length-1; i++)
+			    {
+			     newDiff=Math.abs(myArray[i+1] - myArray[i]);
+			     console.log(newDiff)
+			      if (newDiff != diff) {
+			        return false;
+			       } 
+			    } 
+			    return true;  
+			}
+
+			// isASequence([2,5,6,8]);
+			let sequence = [1,2,3,4,5];
+			if (isASequence(sequence)) {
+				console.log('is a sequence');
+			} else {
+				console.log('is NOT a sequence');
+			}
+		</script>
+	</body>
+</html>
