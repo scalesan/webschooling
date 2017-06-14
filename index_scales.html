@@ -10,6 +10,7 @@
 
 table{
   border-collapse:collapse;
+  
 }
 nav{
   background-color:#000000;
@@ -49,7 +50,9 @@ td:visited{
 #containerForNav{ 
   background-color:#000000;
   padding:10px; 
-  padding-bottom:10px; 
+  
+  
+  
 }
 
 td{
@@ -91,7 +94,7 @@ min-height:100px;
 section{
   border:1px solid black;
   text-align:center;
-  background-color:rgb(62, 60, 88);
+  background-color:red;
   margin-bottom:20px;
   padding:50px;
   color:white;
@@ -119,12 +122,14 @@ section{
 </head>
 <body>
 <div class="parallax"> 
-<div id="containerForNav">
+  <div id="containerForNav">
 <nav>
   <table width="100%" border="0" cellpadding="1">
     <tr>
-      <td class="round-top-left-bottom-corner-cell">    
-  <a href="index_scales.html">Home</a>    
+      <td class="round-top-left-bottom-corner-cell">
+        
+  <a href="index_scales.html">Home</a>
+        
       </td>
       <td>      
   <a href="desktop_scales.html">Desktop</a>
@@ -140,25 +145,69 @@ section{
       </td>
     </tr>
   </table>
+  <script type="text/javascript">
+    function print(data){
+      console.log(data);
+    } 
+        var htmlCollectionArray = document.getElementsByTagName('td');
+        for (let i = 0; i<htmlCollectionArray.length; i++){
+          let navLink = htmlCollectionArray[i];
+          navLink.addEventListener('click', function(event){
+            event.preventDefault(true);
+            let newActiveLink = navLink.getElementsByTagName('a')[0];
+            // alert(newActiveLink.innerHTML);
+            let newNavLinkCollectionArray = navLink.getElementsByTagName('a');
+            if (newActiveLink.innerHTML === 'Tablet'){
+              var previousActiveLink = document.getElementsByClassName('active')[0];
+              if (typeof previousActiveLink != 'undefined'){
+                previousActiveLink.classList.remove('active');
+              }
+              window.location.href='C:/Users/Admin/Desktop/tablet_scales.html';
+              navLink.classList.add('active');
+                }
+            else if (newActiveLink.innerHTML === 'Home'){
+              var previousActiveLink = document.getElementsByClassName('active')[0];
+              if (typeof previousActiveLink != "undefined"){
+                previousActiveLink.classList.remove('active');
+              }
+              window.location.href='C:/Users/Admin/Desktop/index_scales.html';
+              navLink.classList.add('active');
+            }
+
+            else if (newActiveLink.innerHTML === 'Tablet (Portrait)'){
+              var previousActiveLink = document.getElementsByClassName('active')[0];
+              if (typeof previousActiveLink != 'undefined'){
+                previousActiveLink.classList.remove('active');
+              }
+              window.location.href='C:/Users/Admin/Desktop/tabportrait_scales.html';
+              navLink.classList.add('active');
+             
+            }
+
+            else if (newActiveLink.innerHTML === 'Desktop'){
+              var previousActiveLink = document.getElementsByClassName('active')[0];
+              if(typeof previousActiveLink != 'undefined'){
+                previousActiveLink.classList.remove('active');
+              }
+              window.location.href='C:/Users/Admin/Desktop/desktop_scales.html';
+              navLink.classList.add('active');
+            }
+
+            else if (newActiveLink.innerHTML === 'Mobile'){
+              var previousActiveLink = document.getElementsByClassName('active')[0];
+              if (typeof previousActiveLink != 'undefined'){
+                previousActiveLink.classList.remove('active');
+              }
+              window.location.href='C:/Users/Admin/Desktop/mobile_scales.html';
+              navLink.classList.add('active');
+            }
+          });
+          }
+
+
+  </script>
   </nav>
 </div>
-  <script type="text/javascript">
-      function print(data){
-        console.log(data);
-    } 
-      var URL = window.location.pathname;
-      var position = URL.lastIndexOf('/');
-      var pathName = URL.slice(position + 1);
-      var htmlCollectionArray = document.getElementsByTagName('td');
-      for (let i = 0; i<htmlCollectionArray.length; i++){
-          let navLink = htmlCollectionArray[i];
-          let newActiveLink = navLink.getElementsByTagName('a')[0];
-          if (pathName === newActiveLink.getAttribute('href')){
-            navLink.classList.add('active');
-            }
-            // we probably only need above
-  }
-  </script>
 <main class="content">
   <section class="SectionBottomMargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi rerum voluptatem placeat error maiores voluptas ut sequi reiciendis. Cum saepe atque cumque accusamus commodi, sapiente velit quas quaerat doloribus magnam.
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ratione libero similique ipsum explicabo esse assumenda impedit ipsam, delectus velit itaque soluta veritatis voluptatibus consectetur optio repudiandae pariatur tempora sed.</section>
