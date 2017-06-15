@@ -18,11 +18,55 @@
 		.text {
 			width: 100px;
 		}
+
+		table{
+		  border-collapse:collapse;
+		}
+		nav{
+		  background-color:#000000;
+		  border: 1px solid grey;
+		  width:35em;
+		  border-radius:3px;
+		  margin-left:20px; 
+		  
+		}
+		nav a{
+		  color:#ffffff;
+		  font-size:1em;
+		  text-decoration:none;
+		  font-family:arial;
+		  height:4em;
+		  position:relative; 
+		  
+		  
+		  
+		  
+		}
 	</style>
 </head>
 <body>
-<div class="top nav--fixed"></div>
-<div class="text">
+<nav class="nav--fixed">
+  <table width="100%" border="0" cellpadding="1">
+    <tr>
+      <td class="round-top-left-bottom-corner-cell">    
+  <a href="index_scales.html">Home</a>    
+      </td>
+      <td>      
+  <a href="desktop_scales.html">Desktop</a>
+      </td>
+      <td>
+  <a href="tablet_scales.html">Tablet</a>
+      </td>
+      <td>
+  <a href="tabportrait_scales.html">Tablet (Portrait)</a>
+      </td>
+      <td class="round-top-right-bottom-corner-cell">
+  <a href="mobile_scales.html">Mobile</a>
+      </td>
+    </tr>
+  </table>
+  </nav>
+  <div class="text">
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
